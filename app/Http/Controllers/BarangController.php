@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Barang;
+use DB;
 
 class BarangController extends Controller
 {
@@ -14,6 +15,9 @@ class BarangController extends Controller
      */
     public function index()
     {
+        
+
+
         $dtBarang = Barang::all();
         return view('barang.index',compact('dtBarang'));
     }
@@ -36,6 +40,11 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'kode_barang' => 'required|string',
+        ]);
+
+
         Barang::create([
             'kode_barang' => $request->kode_barang,
             'nama_barang' => $request->nama_barang,

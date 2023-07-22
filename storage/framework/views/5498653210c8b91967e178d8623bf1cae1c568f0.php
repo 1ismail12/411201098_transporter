@@ -18,6 +18,12 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Kode Lokasi</label>
               <input type="text" class="form-control" name="kode_lokasi" placeholder="Kode Lokasi"  value="<?php echo e(old('kode_lokasi')); ?>">
+              <?php if(count($errors) > 0): ?>
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    <?php echo e($errors->first('kode_lokasi')); ?>
+
+                </div>
+                <?php endif; ?>
             </div>
 
             <div class="form-group">

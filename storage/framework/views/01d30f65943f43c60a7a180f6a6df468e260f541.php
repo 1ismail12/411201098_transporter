@@ -18,16 +18,34 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Nama</label>
               <input type="text" class="form-control" name="name" placeholder="name"  value="<?php echo e(old('name')); ?>">
+              <?php if(count($errors) > 0): ?>
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    <?php echo e($errors->first('name')); ?>
+
+                </div>
+                <?php endif; ?>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="text" class="form-control" name="email" placeholder="email"  value="<?php echo e(old('email')); ?>">
+                <?php if(count($errors) > 0): ?>
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    <?php echo e($errors->first('email')); ?>
+
+                </div>
+                <?php endif; ?>
               </div>
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
                 <input type="text" class="form-control" name="password" placeholder="password"  value="<?php echo e(old('Password')); ?>">
+                <?php if(count($errors) > 0): ?>
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    <?php echo e($errors->first('password')); ?>
+
+                </div>
+                <?php endif; ?>
               </div>
           </div>
           <!-- /.box-body -->

@@ -1,7 +1,7 @@
 <?php $__env->startPush('customcss'); ?>
 <script src="<?php echo e(asset('plugins/datatables/dataTables.bootstrap.css')); ?>"></script>
 <?php $__env->stopPush(); ?>
-  <?php $__env->startSection('title','Dahboard'); ?>
+  <?php $__env->startSection('title','Kurir'); ?>
   <?php $__env->startSection('page-title','Kurir'); ?>
   <?php $__env->startSection('content'); ?>
   <!-- Default box -->

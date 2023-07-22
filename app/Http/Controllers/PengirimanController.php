@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Kurir;
+use App\Pengiriman;
 
-class KurirController extends Controller
+class PengirimanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class KurirController extends Controller
      */
     public function index()
     {
-        $dtKurir = Kurir::all();
-        return view('kurir.index',compact('dtKurir'));
+        $dtPengiriman = Pengiriman::all();
+        return view('Pengiriman.index',compact('dtPengiriman'));
     }
 
     /**
@@ -25,7 +25,7 @@ class KurirController extends Controller
      */
     public function create()
     {
-        return view('kurir.create');
+        return view('pengiriman.create');
     }
 
     /**
@@ -36,22 +36,22 @@ class KurirController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-
+        
         $this->validate($request, [
-            'name' => 'required|string',
-            'email' => 'required|string',
-            'password' => 'required|string',
+            'no_pengiriman' => 'required|string',
+        ]);
+        
+        Pengiriman::create([
+            'no_pengiriman' => $request->no_pengiriman,
+            'tanggal' => $request->tanggal,
+            'lokasi_id' => $request->lokasi_id,
+            'barang_id' => $request->barang_id,
+            'jumlah_barang' => $request->jumlah_barang,
+            'harga_barang' => $request->harga_barang,
+            'kurir_id' => $request->kurir_id,
         ]);
 
-
-        Kurir::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->password,
-        ]);
-
-        return redirect('kurir');
+        return redirect('pengiriman');
     }
 
     /**

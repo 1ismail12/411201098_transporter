@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'v5.8.35',
-        'version' => '5.8.35.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '8c7fac9b7abfd1758424a404c223e1656fd3b9e2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'arielmejiadev/larapex-charts' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'reference' => '7de57e5aed5b0851cf6043376addc838ef5123dd',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../arielmejiadev/larapex-charts',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'beyondcode/laravel-dump-server' => array(
             'pretty_version' => '1.3.0',
             'version' => '1.3.0.0',
@@ -335,9 +344,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v5.8.35',
-            'version' => '5.8.35.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8c7fac9b7abfd1758424a404c223e1656fd3b9e2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -613,8 +622,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0',
+                0 => '1.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(

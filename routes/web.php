@@ -33,5 +33,10 @@ Route::get('/create', 'LokasiController@create')->name('create');
 Route::get('/index', 'LokasiController@index')->name('index');
 Route::post('/simpan-lokasi1','LokasiController@store')->name('simpan-lokasi1');
 
+Route::resource('pengiriman', 'PengirimanController');
+Route::get('/create', 'PengirimanController@create')->name('create');
+Route::get('/index', 'PengirimanController@index')->name('index');
+Route::post('/simpan-pengiriman','PengirimanController@store')->name('simpan-pengiriman');
+
 
 

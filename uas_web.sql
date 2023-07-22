@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2023 at 06:42 AM
+-- Generation Time: Jul 22, 2023 at 03:53 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -43,7 +43,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id`, `kode_barang`, `nama_barang`, `deskripsi`, `stok_barang`, `harga_barang`, `created_at`, `updated_at`) VALUES
-(1, '12', 'tas', 'tas sd', 21, 1200000, '2023-07-14 21:10:06', '2023-07-14 21:10:06');
+(1, '12', 'tas', 'tas sd', 21, 1200000, '2023-07-14 21:10:06', '2023-07-14 21:10:06'),
+(2, '1352', 'Laptop', 'Laptop gaming intel i7 RTX3070', 8, 15900000, '2023-07-15 01:51:23', '2023-07-15 01:51:23'),
+(3, '4123', 'VGA Nvidia RTX 3050', 'Nvidia RTX 3050', 17, 6000000, '2023-07-15 01:53:02', '2023-07-15 01:53:02');
 
 -- --------------------------------------------------------
 
@@ -127,10 +129,10 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengirimen`
+-- Table structure for table `pengiriman`
 --
 
-CREATE TABLE `pengirimen` (
+CREATE TABLE `pengiriman` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `no_pengiriman` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tanggal` date NOT NULL,
@@ -142,6 +144,13 @@ CREATE TABLE `pengirimen` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pengiriman`
+--
+
+INSERT INTO `pengiriman` (`id`, `no_pengiriman`, `tanggal`, `lokasi_id`, `barang_id`, `jumlah_barang`, `harga_barang`, `kurir_id`, `created_at`, `updated_at`) VALUES
+(1, '74', '2023-07-20', 12, 23, 5, 15900000, 443322, '2023-07-22 00:03:47', '2023-07-22 00:03:47');
 
 -- --------------------------------------------------------
 
@@ -203,9 +212,9 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pengirimen`
+-- Indexes for table `pengiriman`
 --
-ALTER TABLE `pengirimen`
+ALTER TABLE `pengiriman`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -223,7 +232,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kurir`
@@ -244,10 +253,10 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `pengirimen`
+-- AUTO_INCREMENT for table `pengiriman`
 --
-ALTER TABLE `pengirimen`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pengiriman`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -146,6 +146,7 @@ class ComposerStaticInit15e3689dad2282bed4f0bceb18937f4f
         ),
         'A' => 
         array (
+            'ArielMejiaDev\\LarapexCharts\\' => 28,
             'App\\' => 4,
         ),
     );
@@ -401,6 +402,10 @@ class ComposerStaticInit15e3689dad2282bed4f0bceb18937f4f
         array (
             0 => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src',
         ),
+        'ArielMejiaDev\\LarapexCharts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -425,6 +430,7 @@ class ComposerStaticInit15e3689dad2282bed4f0bceb18937f4f
     );
 
     public static $classMap = array (
+        'App\\Barang' => __DIR__ . '/../..' . '/app/Barang.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -432,8 +438,12 @@ class ComposerStaticInit15e3689dad2282bed4f0bceb18937f4f
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\BarangController' => __DIR__ . '/../..' . '/app/Http/Controllers/BarangController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\KurirController' => __DIR__ . '/../..' . '/app/Http/Controllers/KurirController.php',
+        'App\\Http\\Controllers\\LokasiController' => __DIR__ . '/../..' . '/app/Http/Controllers/LokasiController.php',
+        'App\\Http\\Controllers\\PengirimanController' => __DIR__ . '/../..' . '/app/Http/Controllers/PengirimanController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -442,16 +452,31 @@ class ComposerStaticInit15e3689dad2282bed4f0bceb18937f4f
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Kurir' => __DIR__ . '/../..' . '/app/Kurir.php',
+        'App\\Lokasi' => __DIR__ . '/../..' . '/app/Lokasi.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
-        'App\\barang' => __DIR__ . '/../..' . '/app/barang.php',
-        'App\\kurir' => __DIR__ . '/../..' . '/app/kurir.php',
-        'App\\lokasi' => __DIR__ . '/../..' . '/app/lokasi.php',
-        'App\\pengiriman' => __DIR__ . '/../..' . '/app/pengiriman.php',
+        'ArielMejiaDev\\LarapexCharts\\AreaChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/AreaChart.php',
+        'ArielMejiaDev\\LarapexCharts\\BarChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/BarChart.php',
+        'ArielMejiaDev\\LarapexCharts\\Contracts\\MustAddComplexData' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/Contracts/MustAddComplexData.php',
+        'ArielMejiaDev\\LarapexCharts\\Contracts\\MustAddSimpleData' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/Contracts/MustAddSimpleData.php',
+        'ArielMejiaDev\\LarapexCharts\\DonutChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/DonutChart.php',
+        'ArielMejiaDev\\LarapexCharts\\Facades\\LarapexChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/Facades/LarapexChart.php',
+        'ArielMejiaDev\\LarapexCharts\\HeatMapChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/HeatMapChart.php',
+        'ArielMejiaDev\\LarapexCharts\\HorizontalBar' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/HorizontalBar.php',
+        'ArielMejiaDev\\LarapexCharts\\LarapexChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/LarapexChart.php',
+        'ArielMejiaDev\\LarapexCharts\\LarapexChartsServiceProvider' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/LarapexChartsServiceProvider.php',
+        'ArielMejiaDev\\LarapexCharts\\LineChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/LineChart.php',
+        'ArielMejiaDev\\LarapexCharts\\PieChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/PieChart.php',
+        'ArielMejiaDev\\LarapexCharts\\PolarAreaChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/PolarAreaChart.php',
+        'ArielMejiaDev\\LarapexCharts\\RadarChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/RadarChart.php',
+        'ArielMejiaDev\\LarapexCharts\\RadialChart' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/RadialChart.php',
+        'ArielMejiaDev\\LarapexCharts\\Traits\\ComplexChartDataAggregator' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/Traits/ComplexChartDataAggregator.php',
+        'ArielMejiaDev\\LarapexCharts\\Traits\\SimpleChartDataAggregator' => __DIR__ . '/..' . '/arielmejiadev/larapex-charts/src/Traits/SimpleChartDataAggregator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',

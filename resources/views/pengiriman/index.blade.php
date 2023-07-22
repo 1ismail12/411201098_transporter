@@ -2,15 +2,15 @@
 @push('customcss')
 <script src="{{ asset('plugins/datatables/dataTables.bootstrap.css') }}"></script>
 @endpush
-  @section('title','Kurir')
-  @section('page-title','Kurir')
+  @section('title','Pengiriman')
+  @section('page-title','Pengiriman')
   @section('content')
   <!-- Default box -->
   <div class="box">
     <div class="box-header">
-      <h3 class="box-title">Data Kurir</h3>
+      <h3 class="box-title">Data Pengiriman</h3>
       <div class="pull-right">
-        <a href="{{ route('kurir.create') }}" class="btn btn-info">Tambah</a>
+        <a href="{{ route('pengiriman.create') }}" class="btn btn-info">Tambah</a>
       </div>
     </div>
     <!-- /.box-header -->
@@ -18,15 +18,23 @@
       <table id="example1" class="table table-bordered table-striped">
         <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Password</th>
+          <th>No Pengiriman</th>
+          <th>Tanggal</th>
+          <th>Lokasi id</th>
+          <th>Barang id</th>
+          <th>Jumlah Barang</th>
+          <th>Harga Barang</th>
+          <th>Kurir id</th>
         </tr>
-        @foreach($dtKurir as $item)
+        @foreach($dtPengiriman as $item)
         <tr>
-          <td>{{ $item->name }}</td>
-          <td>{{ $item->email }}</td>
-          <td>{{ $item->password }}</td>
+          <td>{{ $item->no_pengiriman }}</td>
+          <td>{{ $item->tanggal }}</td>
+          <td>{{ $item->lokasi_id }}</td>
+          <td>{{ $item->barang_id }}</td>
+          <td>{{ $item->jumlah_barang }}</td>
+          <td>{{ $item->harga_barang }}</td>
+          <td>{{ $item->kurir_id }}</td>
         </tr>
         @endforeach
         

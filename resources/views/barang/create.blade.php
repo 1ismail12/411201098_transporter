@@ -19,6 +19,11 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Kode Barang</label>
               <input type="text" class="form-control" name="kode_barang" placeholder="Kode Barang"  value="{{ old('kode_barang') }}">
+              @if (count($errors) > 0)
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    {{ $errors->first('kode_barang') }}
+                </div>
+                @endif
             </div>
 
             <div class="form-group">

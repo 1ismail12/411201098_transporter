@@ -2,7 +2,7 @@
 @push('customcss')
 <script src="{{ asset('plugins/datatables/dataTables.bootstrap.css') }}"></script>
 @endpush
-  @section('title','Dahboard')
+  @section('title','Barang')
   @section('page-title','Barang')
   @section('content')
   <!-- Default box -->

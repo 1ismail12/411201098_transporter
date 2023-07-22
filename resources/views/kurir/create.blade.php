@@ -19,16 +19,31 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Nama</label>
               <input type="text" class="form-control" name="name" placeholder="name"  value="{{ old('name') }}">
+              @if (count($errors) > 0)
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    {{ $errors->first('name') }}
+                </div>
+                @endif
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="text" class="form-control" name="email" placeholder="email"  value="{{ old('email') }}">
+                @if (count($errors) > 0)
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    {{ $errors->first('email') }}
+                </div>
+                @endif
               </div>
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
                 <input type="text" class="form-control" name="password" placeholder="password"  value="{{ old('Password') }}">
+                @if (count($errors) > 0)
+                <div style="width: auto; color:crimson; margin-top: 0.25rem;">
+                    {{ $errors->first('password') }}
+                </div>
+                @endif
               </div>
           </div>
           <!-- /.box-body -->

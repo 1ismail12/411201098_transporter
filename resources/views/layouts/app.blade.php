@@ -84,11 +84,11 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="treeview">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li><a href="{{ route('kurir.index') }}"><i class="fa fa-adjust"></i>Kurir</a></li>
             <li><a href="{{ route('barang.index') }}"><i class="fa fa-adjust"></i>Barang</a></li>
             <li><a href="{{ route('lokasi.index') }}"><i class="fa fa-adjust"></i>Lokasi</a></li>
-            <li><a href="#"><i class="fa fa-adjust"></i>Pengiriman</a></li>
+            <li><a href="{{ route('pengiriman.index') }}"><i class="fa fa-adjust"></i>Pengiriman</a></li>
         </li>
       </ul>
     </section>

@@ -35,6 +35,10 @@ class LokasiController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'kode_lokasi' => 'required|string',
+        ]);
+
         Lokasi::create([
             'kode_lokasi' => $request->kode_lokasi,
             'nama_lokasi' => $request->nama_lokasi,
